@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ProductCard from "./components/ProductCard";
 
 function App() {
+  const product = {
+    title: "Product Title",
+    description: "Product Description",
+    image:
+      "https://www.visily.ai/wp-content/uploads/2022/11/Visily-Water-Mark-Framed-Logo@4x-1200x1200.png",
+    price: 300,
+    sold: 3000,
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <ProductCard {...product} />
+    </main>
   );
 }
 
